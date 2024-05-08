@@ -63,12 +63,41 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\Deliver.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVVM\View\PalletList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVVM\View\CreatePallet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\Model\PalletManager.cs" />
+    <Compile Include="MVVM\Model\Pallet.cs" />
+    <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\PalletListViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\DeliverViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\CreatePalletViewModel.cs" />
+    <Compile Include="MVVM\View\Deliver.xaml.cs">
+      <DependentUpon>Deliver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\PalletList.xaml.cs">
+      <DependentUpon>PalletList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\CreatePallet.xaml.cs">
+      <DependentUpon>CreatePallet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,5 +123,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

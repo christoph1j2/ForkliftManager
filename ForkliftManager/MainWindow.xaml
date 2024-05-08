@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ForkliftManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="550" Width="910"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <Border Background="#2e3136" CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Grid.RowSpan="2" Grid.Column="1" Background="#495057" CornerRadius="0,20,20,0"/>
+            <TextBlock Text="ForkLiftManager"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       Margin="10,0,0,0"
+                       FontWeight="Bold"
+                       FontSize="20"/>
+            <StackPanel Grid.Row="1">
+
+                <RadioButton Height="50"
+                             Content="Auftrag aufgeben"
+                             IsChecked="True"
+                             Style="{StaticResource RadioButtonCustomStyle}"/>
+                <RadioButton Height="50"
+                             Content="Paletten"/>
+                <RadioButton Height="50"
+                             Content="Lieferung"/>
+            </StackPanel>
+            <ContentControl Margin="10"  Grid.Column="1" Grid.Row="1" />
+        </Grid>
+    </Border>
 </Window>
