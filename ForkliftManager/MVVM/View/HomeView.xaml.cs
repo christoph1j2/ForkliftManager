@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ForkliftManager.MVVM.View
 {
     /// <summary>
-    /// Interaktionslogik für UserControl1.xaml
+    /// Interaktionslogik für HomeView.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class HomeView : UserControl
     {
-        public UserControl1()
+        public HomeView()
         {
             InitializeComponent();
         }

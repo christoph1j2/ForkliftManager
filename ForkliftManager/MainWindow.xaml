@@ -3,51 +3,101 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:v="clr-namespace:ForkliftManager.MVVM.View"
-        xmlns:vm="clr-namespace:ForkliftManager.MVVM.ViewModel"
-        xmlns:m="clr-namespace:ForkliftManager.MVVM.Model"
+        xmlns:viewModel="clr-namespace:ForkliftManager.MVVM.ViewModel" xmlns:view="clr-namespace:ForkliftManager.MVVM.View"
+        xmlns:local="clr-namespace:ForkliftManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="910"
+        Title="MainWindow" Height="600" Width="920"
         WindowStyle="None"
+        ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen">
+
     <Window.DataContext>
-        <vm:MainViewModel/>
+        <viewModel:MainViewModel/>
     </Window.DataContext>
-    <Border Background="#2e3136" CornerRadius="20">
+    
+    <Border Background="#272537"
+            CornerRadius="30">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border Grid.RowSpan="2" Grid.Column="1" Background="#495057" CornerRadius="0,20,20,0"/>
-            <TextBlock Text="ForkLiftManager"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Foreground="White"
-                       Margin="10,0,0,0"
-                       FontWeight="Bold"
-                       FontSize="20"/>
+
+            <TextBlock Text="Forklift Manager"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   FontSize="22"/>
+
             <StackPanel Grid.Row="1">
 
-                <RadioButton Height="50"
-                             Content="Create Pallet"
+                <RadioButton Content="Home"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding CreatePalletCommand}"/>
-                <RadioButton Height="50"
-                             Content="Pallet List"
-                             Command="{Binding PalletListCommand}"/>
-                <RadioButton Height="50"
-                             Content="Delivery"
-                             Command="{Binding DeliverCommand}"/>
+                             Command="{Binding HomeViewCommand}"/>
+                <RadioButton Content="Place Order"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding PlaceOrderViewCommand}"/>
+                <RadioButton Content="Palletes"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+                <RadioButton Content="Delivery"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
             </StackPanel>
-            <ContentControl Margin="10"  Grid.Column="1" Grid.Row="1" Content="{Binding CurrentView}"/>
-            
+
+            <Rectangle Grid.Row="0"
+                       Grid.Column="1"
+                       Stretch="Fill">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="#273045"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Grid.Row="1"
+                       Grid.Column="1"
+                       Stretch="Fill">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="#273045"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Button
+                Width="40"
+                Height="40"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="0,0,20,0"
+                Grid.Column="1"
+                Content="X"
+                FontSize="20"
+                Foreground="White"
+                Background="Transparent"/>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
         </Grid>
+
+
     </Border>
 </Window>

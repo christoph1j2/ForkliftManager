@@ -9,37 +9,39 @@ namespace ForkliftManager.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
+
+        public RelayCommand HomeViewCommand { get; set; }
+        public RelayCommand PlaceOrderViewCommand { get; set; }
+        
+        public HomeViewModel HomeVM { get; set; }
+        public PlaceOrderViewModel PlaceOrderVM { get; set; }
+
         private object _currentView;
+
         public object CurrentView
         {
             get { return _currentView; }
-            set
-            {
+            set { 
                 _currentView = value;
                 OnPropertyChanged();
             }
         }
 
-        //create a command for every window/button
-        public RelayCommand CreatePalletCommand { get; set; }
-        public RelayCommand PalletListCommand { get; set; }
-        public RelayCommand DeliverCommand { get; set; }
-
-        public CreatePalletViewModel CreateVM { get; set; }
-        public DeliverViewModel DeliverVM { get; set; }
-        public PalletListViewModel ListVM { get; set; }
-
         public MainViewModel()
         {
-            CreateVM = new CreatePalletViewModel();
-            CreatePalletCommand = new RelayCommand(o => { CurrentView = CreateVM; });
+            HomeVM = new HomeViewModel();
+            PlaceOrderVM = new PlaceOrderViewModel();
 
-            DeliverVM = new DeliverViewModel();
-            DeliverCommand = new RelayCommand(o => { CurrentView = DeliverVM; });
+            CurrentView = HomeVM;
 
-            ListVM = new PalletListViewModel();
-            PalletListCommand = new RelayCommand(o => { CurrentView = ListVM; });
+            HomeViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = HomeVM;
+            });
+            PlaceOrderViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = PlaceOrderVM;
+            });
         }
-
     }
 }

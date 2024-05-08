@@ -11,10 +11,10 @@ namespace ForkliftManager.Core
     {
 
         private Action<object> _execute;
-        private Predicate<object> _canExecute;
+        private Func<object,bool> _canExecute;
 
         //constructor for a command
-        public RelayCommand(Action<object> execute, Predicate<object> canExecute = null)
+        public RelayCommand(Action<object> execute, Func<object,bool> canExecute = null)
         {
             _execute = execute;
             _canExecute = canExecute;
