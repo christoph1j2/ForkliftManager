@@ -18,7 +18,7 @@
     </Window.DataContext>
     
     <Border Background="#272537"
-            CornerRadius="30">
+            CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -89,7 +89,8 @@
                 Content="X"
                 FontSize="20"
                 Foreground="White"
-                Background="Transparent"/>
+                Background="Transparent"
+                Click="CloseAppButton_Click"/>
 
             <ContentControl Grid.Row="1"
                             Grid.Column="1"

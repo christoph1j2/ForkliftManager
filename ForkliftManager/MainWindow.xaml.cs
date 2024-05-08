@@ -24,5 +24,17 @@ namespace ForkliftManager
         {
             InitializeComponent();
         }
+        private void CloseAppButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult res = MessageBox.Show("Are you sure you want to quit?", "Exit", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            if(res == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+            else if(res == MessageBoxResult.No)
+            {
+                
+            }
+        }
     }
 }
