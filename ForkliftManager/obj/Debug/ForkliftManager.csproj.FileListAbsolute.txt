@@ -1,4 +1,5 @@
 C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\ForkliftManager.csproj.AssemblyReference.cache
+C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MainWindow.baml
 C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MainWindow.g.cs
 C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\Deliver.g.cs
 C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\PalletList.g.cs
