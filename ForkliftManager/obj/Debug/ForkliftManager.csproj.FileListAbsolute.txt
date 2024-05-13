@@ -20,3 +20,7 @@ C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\
 C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\PlaceOrderView.g.cs
 C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\PlaceOrderView.baml
+C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\PalletList.g.cs
+C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\PalletList.baml
+C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\DeliveryView.g.cs
+C:\Users\Q11069\Documents\Projekte\C#\ForkliftManager\ForkliftManager\obj\Debug\MVVM\View\DeliveryView.baml

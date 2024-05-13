@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ForkliftManager.MVVM.View.CreatePallet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ForkliftManager.MVVM.View" xmlns:local1="clr-namespace:ForkliftManager.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <local1:DeliveryViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <ComboBox Margin="50" Width="220" Height="30" x:Name="PalettenAuswahl" ItemsSource="{Binding List}" SelectedItem="{Binding SelectedPallet}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Nummer: "/>
+                        <TextBlock Text="{Binding PalletNumber}" Foreground="Red" Margin="0,0,5,0"/>
+                        <TextBlock Text="Von Halle: "/>
+                        <TextBlock Text="{Binding HallNumber}" Foreground="Red" Margin="0,0,5,0"/>
+                        <TextBlock Text="In: "/>
+                        <TextBlock Text="{Binding TargetHall}" Foreground="Red" Margin="0,0,5,0"/>
+                        <TextBlock Text="Größe: "/>
+                        <TextBlock Text="{Binding PalletSize}" Foreground="Red"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Button Width="150" Height="30" Cursor="Hand" Command="{Binding Execute}" Margin="319,296,331,124"/>
+
+    </Grid>
+</UserControl>

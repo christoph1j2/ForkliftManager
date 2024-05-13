@@ -84,7 +84,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\DeliveryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\PalletList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,11 +106,21 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\Model\Pallet.cs" />
+    <Compile Include="MVVM\Model\PalletManager.cs" />
+    <Compile Include="MVVM\ViewModel\DeliveryViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\PalletListViewModel.cs" />
     <Compile Include="MVVM\ViewModel\PlaceOrderViewModel.cs" />
+    <Compile Include="MVVM\View\DeliveryView.xaml.cs">
+      <DependentUpon>DeliveryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\PalletList.xaml.cs">
+      <DependentUpon>PalletList.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\PlaceOrderView.xaml.cs">
       <DependentUpon>PlaceOrderView.xaml</DependentUpon>
@@ -134,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

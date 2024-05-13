@@ -12,9 +12,15 @@ namespace ForkliftManager.MVVM.ViewModel
 
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand PlaceOrderViewCommand { get; set; }
-        
+        public RelayCommand PalletListViewCommand { get; set; }
+        public RelayCommand DeliveryViewCommand { get; set; }
+
+
         public HomeViewModel HomeVM { get; set; }
         public PlaceOrderViewModel PlaceOrderVM { get; set; }
+        public PalletListViewModel PalletListVM { get; set; }
+        public DeliveryViewModel DeliveryVM { get; set; }
+
 
         private object _currentView;
 
@@ -31,6 +37,8 @@ namespace ForkliftManager.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
             PlaceOrderVM = new PlaceOrderViewModel();
+            PalletListVM = new PalletListViewModel();
+            DeliveryVM = new DeliveryViewModel();
 
             CurrentView = HomeVM;
 
@@ -41,6 +49,14 @@ namespace ForkliftManager.MVVM.ViewModel
             PlaceOrderViewCommand = new RelayCommand(o =>
             {
                 CurrentView = PlaceOrderVM;
+            });
+            PalletListViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = PalletListVM;
+            });
+            DeliveryViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = DeliveryVM;
             });
         }
     }
